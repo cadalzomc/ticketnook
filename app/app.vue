@@ -25,8 +25,10 @@ useSeoMeta({
 <template>
   <UApp>
     <MainHeader />
-    <UMain class="container mx-auto px-4 py-8">
-      <NuxtPage />
+    <UMain>
+      <UContainer class="mt-10">
+        <NuxtPage />
+      </UContainer>
     </UMain>
     <MainFooter />
   </UApp>
