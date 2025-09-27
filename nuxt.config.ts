@@ -21,6 +21,7 @@ export default defineNuxtConfig({
   components: [
     "~/components",
     { path: "~/ui/layouts", extensions: ["vue"], prefix: "Main" },
+    { path: "~/ui/sections", extensions: ["vue"], prefix: "Section" },
   ],
   compatibilityDate: "2025-01-15",
 
