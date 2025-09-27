@@ -7,6 +7,8 @@ export default defineNuxtConfig({
     "@nuxt/icon",
     "@nuxt/image",
     "@nuxt/test-utils",
+    "@pinia/nuxt",
+    "@nuxt/devtools",
   ],
 
   devtools: {
