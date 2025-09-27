@@ -10,13 +10,10 @@ export default defineNuxtConfig({
     "@pinia/nuxt",
     "@nuxt/devtools",
   ],
-
   devtools: {
     enabled: true,
   },
-
   css: ["~/assets/css/main.css"],
-
   routeRules: {
     "/": { prerender: true },
   },
@@ -25,8 +22,10 @@ export default defineNuxtConfig({
     { path: "~/ui/layouts", extensions: ["vue"], prefix: "Main" },
     { path: "~/ui/sections", extensions: ["vue"], prefix: "Section" },
   ],
+  imports: {
+    dirs: ["composables", "stores"],
+  },
   compatibilityDate: "2025-01-15",
-
   eslint: {
     config: {
       stylistic: {

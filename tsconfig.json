@@ -6,5 +6,15 @@
     { "path": "./.nuxt/tsconfig.server.json" },
     { "path": "./.nuxt/tsconfig.shared.json" },
     { "path": "./.nuxt/tsconfig.node.json" }
-  ]
+  ],
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "~/*": ["./*"],
+      "@/*": ["./*"],
+      "#app": ["./.nuxt/types/app"],
+      "#imports": ["./.nuxt/types/imports"]
+    }
+  },
+  "exclude": ["node_modules", ".nuxt", "dist"]
 }
