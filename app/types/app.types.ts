@@ -1,5 +1,5 @@
 export type TRole = "admin" | "user";
-export type TGenere =
+export type TGenre =
   | "action"
   | "comedy"
   | "drama"

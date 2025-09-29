@@ -1,13 +1,13 @@
-import type { TReservationStatus } from "~/types/app.types";
+import type { TGenre, TReservationStatus } from "~/types/app.types";
 
 export interface IMovie {
   id: string;
   title: string;
   description: string;
   posterUrl: string;
-  genres: string[];
+  genre: TGenre;
   duration: number;
-  rating: string;
+  rating: Number;
   createdAt: Date;
 }
 

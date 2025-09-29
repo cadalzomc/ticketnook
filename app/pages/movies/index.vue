@@ -1,6 +1,8 @@
 <template>
-  <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
-    <CardMovie
+  <div
+    class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"
+  >
+    <MovieCard
       v-for="theater in movieStore.movies"
       :key="theater.id"
       :movie="theater"
@@ -9,7 +11,6 @@
 </template>
 
 <script setup lang="ts">
-import CardMovie from "~/components/card/CardMovie.vue";
 import type { IShowtime } from "~/lib/models";
 import { useAuthStore, useMovieStore } from "~/lib/stores";
 

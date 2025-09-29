@@ -24,4 +24,10 @@ export default defineNuxtConfig({
     dirs: ["composables", "stores"],
   },
   compatibilityDate: "2025-01-15",
+  postcss: {
+    plugins: {
+      "@tailwindcss/postcss": {},
+      autoprefixer: {},
+    },
+  },
 });

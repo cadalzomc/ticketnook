@@ -2,12 +2,9 @@
   <div class="flex flex-col items-center justify-center gap-4 p-4">
     <UPageCard class="w-full max-w-md">
       <template #header>
-        <UNuxtLink
-          to="/"
-          class="flex items-center justify-center space-x-2 mb-10"
-        >
+        <ULink to="/" class="flex items-center justify-center space-x-2 mb-10">
           <AppLogo class="w-auto h-8" />
-        </UNuxtLink>
+        </ULink>
 
         <UAuthForm
           title="Sign Up"
@@ -16,6 +13,9 @@
           :providers="providers"
           :validate-on="[]"
           @submit="onSubmit"
+          :submit="{
+            label: 'Sign Up',
+          }"
           :schema="zodLogin"
         />
       </template>
@@ -43,6 +43,13 @@ import { type loginSchema, zodLogin } from "~/lib/zod";
 const toast = useToast();
 
 const fields = [
+  {
+    name: "name",
+    type: "text" as const,
+    label: "Fullname",
+    placeholder: "Enter your name",
+    required: true,
+  },
   {
     name: "email",
     type: "text" as const,
@@ -81,7 +88,7 @@ const providers = [
   },
 ];
 
-function onSubmit(payload: FormSubmitEvent<loginSchema>) {
+const onSubmit = (payload: FormSubmitEvent<loginSchema>) => {
   console.log("Submitted", payload);
-}
+};
 </script>

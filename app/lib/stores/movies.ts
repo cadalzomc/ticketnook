@@ -15,9 +15,9 @@ const staticMovies: IMovie[] = [
       "An epic journey through unknown lands filled with danger and wonder.",
     posterUrl:
       "https://images.pexels.com/photos/7991579/pexels-photo-7991579.jpeg?auto=compress&cs=tinysrgb&w=400",
-    genres: ["Adventure", "Action"],
+    genre: "action",
     duration: 150,
-    rating: "PG-13",
+    rating: 8.5,
     createdAt: new Date("2024-01-01"),
   },
   {
@@ -27,9 +27,9 @@ const staticMovies: IMovie[] = [
       "A thrilling mystery that will keep you on the edge of your seat.",
     posterUrl:
       "https://images.pexels.com/photos/7991225/pexels-photo-7991225.jpeg?auto=compress&cs=tinysrgb&w=400",
-    genres: ["Mystery", "Thriller"],
+    genre: "thriller",
     duration: 125,
-    rating: "PG-13",
+    rating: 7.3,
     createdAt: new Date("2024-01-15"),
   },
   {
@@ -39,9 +39,21 @@ const staticMovies: IMovie[] = [
       "A hilarious comedy that will make you laugh until your sides hurt.",
     posterUrl:
       "https://images.pexels.com/photos/7991228/pexels-photo-7991228.jpeg?auto=compress&cs=tinysrgb&w=400",
-    genres: ["Comedy", "Romance"],
+    genre: "comedy",
     duration: 105,
-    rating: "PG",
+    rating: 9.7,
+    createdAt: new Date("2024-02-01"),
+  },
+  {
+    id: "4",
+    title: "Action Central",
+    description:
+      "A hilarious action to comedy that will make you laugh until and punch the man beside you until your sides hurt.",
+    posterUrl:
+      "https://images.pexels.com/photos/7991225/pexels-photo-7991225.jpeg?auto=compress&cs=tinysrgb&w=400",
+    genre: "horror",
+    duration: 105,
+    rating: 7.3,
     createdAt: new Date("2024-02-01"),
   },
 ];
